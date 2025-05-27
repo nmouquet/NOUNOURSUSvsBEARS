@@ -1,0 +1,43 @@
+Package: NOUNOURSUSvsBEARS
+Type: Package
+Title: Too Cute to Be Wild
+Version: 0.0.1
+Authors@R: c(
+    person(given   = "Nicolas",
+           family  = "Mouquet",
+           role    = c("aut", "cre", "cph"),
+           email   = "nicolas.mouquet@cnrs.fr",
+           comment = c(ORCID = "0000-0003-1840-6984")))
+Description: Research compendium of the article 'Too cute to be wild: what 
+        teddy bears reveal about our disconnection from nature' by Mouquet N. 
+        et al. submited to Trends in Ecology and Evolution in 2025.
+URL: https://github.com/nmouquet/NOUNOURSUSvsBEARS
+BugReports: https://github.com/nmouquet/NOUNOURSUSvsBEARS/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    colorspace,
+    dplyr,
+    ggplot2,
+    gridExtra,
+    imager,
+    reshape2,
+    SDMTools,
+    splancs,
+    tidyverse
+Imports: 
+    ade4,
+    cowplot,
+    factoextra,
+    GGally,
+    here,
+    parallel,
+    pbmcapply,
+    RColorBrewer,
+    readxl,
+    spatstat.geom,
+    stringdist,
+    stringi,
+    tidytext
