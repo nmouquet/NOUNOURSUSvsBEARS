@@ -57,8 +57,8 @@ The script [`analysis/morpho/morpho.R`](https://github.com/nmouquet/NOUNOURSUSvs
 The following Figures and Tables can be reproduced with the script indicated in brackets (all in [`analysis/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/)):
 
 - [cuddly.tiff](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs), was produced by [`Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/Cludy_toys.R)
-- [fig_pca](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs) wad produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/master/analysis/Bear`_vs_nounoursus.R)
-- [fig1-sup](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs), [fig2-sup](https://github.com/nmouquet/SAFE/tree/master/outputs), were produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/master/analysis/Bear`_vs_nounoursus.R)
+- [fig_pca](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs) wad produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/Bear_vs_nounoursus.R)
+- [fig1-sup](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs), [fig2-sup](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs), were produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/master/analysis/Bear`_vs_nounoursus.R)
 
 
 ## Installation
