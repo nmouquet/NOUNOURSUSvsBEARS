@@ -32,7 +32,7 @@ contains project metadata (author, date, dependencies, etc.)
     
 The script [`analysis/Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Cludy_toys.R) compute functional insurance with simulated metacommunities.
 
-The script [`analysis/Bear`_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Bear`_vs_nounoursus.R) compute functional insurance for alpine herbaceous communities.
+The script [`analysis/Bear_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Bear_vs_nounoursus.R) get the morphometric and colorimetric features from the analysis of images for Teddy bears and Real bears; and perform the main analysis
 
 The script [`analysis/features/cluster.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/features/cluster.R) extract information on color clusters heterogeneity in images.
 
