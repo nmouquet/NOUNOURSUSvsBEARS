@@ -36,7 +36,7 @@ The script [`analysis/Bear_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOUR
 
 The script [`analysis/features/cluster.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/features/cluster.R) extract information on color clusters heterogeneity in images.
 
-The script [`analysis/features/lumsat.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/features/lumsatl.R) extract information on lightness and saturation in images.
+The script [`analysis/features/lumsat.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/features/lumsat.R) extract information on lightness and saturation in images.
 
 The script [`analysis/morpho/morpho.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/morpho/morpho.R) compute the morphometric measures from the analysis of teady and real bears images.
 
