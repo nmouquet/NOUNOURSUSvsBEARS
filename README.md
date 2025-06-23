@@ -11,34 +11,34 @@ Research compendium to reproduce analyses and figures of the following article:
 
 This repository is structured as follow:
 
-- [`data/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/data):
+- [`data/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/data):
 contains data required to reproduce figures and tables
 
-- [`analysis/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/):
+- [`analysis/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/):
 contains subfolders organized by theme. Each folder contains R scripts to run 
 specific analysis
 
-- [`results/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/results):
+- [`results/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/results):
 follows the structure of analyses. Contains intermediate results and the 
 numeric results used to produce the figures
 
-- [`outputs/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/ouputs):
+- [`outputs/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/ouputs):
 contains the figures produced for the article
 
-- [`DESCRIPTION`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/DESCRIPTION):
+- [`DESCRIPTION`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/DESCRIPTION):
 contains project metadata (author, date, dependencies, etc.)
 
 ## Workflow
     
-The script [`analysis/Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Cludy_toys.R) compute functional insurance with simulated metacommunities.
+The script [`analysis/Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/Cludy_toys.R) compute functional insurance with simulated metacommunities.
 
-The script [`analysis/Bear_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Bear_vs_nounoursus.R) get the morphometric and colorimetric features from the analysis of images for Teddy bears and Real bears; and perform the main analysis
+The script [`analysis/Bear_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/Bear_vs_nounoursus.R) get the morphometric and colorimetric features from the analysis of images for Teddy bears and Real bears; and perform the main analysis
 
-The script [`analysis/features/cluster.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/features/cluster.R) extract information on color clusters heterogeneity in images.
+The script [`analysis/features/cluster.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/features/cluster.R) extract information on color clusters heterogeneity in images.
 
-The script [`analysis/features/lumsat.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/features/lumsatl.R) extract information on lightness and saturation in images.
+The script [`analysis/features/lumsat.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/features/lumsatl.R) extract information on lightness and saturation in images.
 
-The script [`analysis/morpho/morpho.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/morpho/morpho.R) compute the morphometric measures from the analysis of teady and real bears images.
+The script [`analysis/morpho/morpho.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/morpho/morpho.R) compute the morphometric measures from the analysis of teady and real bears images.
 
 
 ## Big files 
@@ -54,11 +54,11 @@ The script [`analysis/morpho/morpho.R`](https://github.com/nmouquet/NOUNOURSUSvs
 
 ##Figures are stored in `outputs/`.
 
-The following Figures and Tables can be reproduced with the script indicated in brackets (all in [`analysis/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/)):
+The following Figures and Tables can be reproduced with the script indicated in brackets (all in [`analysis/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/)):
 
-- [cuddly.tiff](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/outputs), was produced by [`Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Cludy_toys.R)
-- [fig_pca](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/outputs) wad produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/main/analysis/Bear`_vs_nounoursus.R)
-- [fig1-sup](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/outputs), [fig2-sup](https://github.com/nmouquet/SAFE/tree/main/outputs), were produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/main/analysis/Bear`_vs_nounoursus.R)
+- [cuddly.tiff](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs), was produced by [`Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/analysis/Cludy_toys.R)
+- [fig_pca](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs) wad produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/master/analysis/Bear`_vs_nounoursus.R)
+- [fig1-sup](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs), [fig2-sup](https://github.com/nmouquet/SAFE/tree/master/outputs), were produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/master/analysis/Bear`_vs_nounoursus.R)
 
 
 ## Installation
