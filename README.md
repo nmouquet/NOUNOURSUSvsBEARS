@@ -22,7 +22,7 @@ specific analysis
 follows the structure of analyses. Contains intermediate results and the 
 numeric results used to produce the figures
 
-- [`outputs/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/ouputs):
+- [`outputs/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/outputs):
 contains the figures produced for the article
 
 - [`DESCRIPTION`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/master/DESCRIPTION):
