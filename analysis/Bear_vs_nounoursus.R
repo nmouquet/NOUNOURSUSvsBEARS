@@ -7,7 +7,9 @@
 #'
 #'Produces dataframe
 #'    - results/bear_all
+#'    - outputs/fig_pca.tiff
 #'    - outputs/fig1_sup.tiff
+#'    - outputs/fig2_sup.tiff
 #'
 #' @author Nicolas Mouquet, \email{nicolas.mouquet@@cnrs.fr},
 #'
@@ -58,6 +60,9 @@ real_bears_morpho <- real_bears_morpho[, c(
   "SnoutWid"
 )]
 real_bears_morpho$Type <- "bears"
+
+rownames(real_bears_morpho) <- real_bears_morpho$ID
+
 nounoursus_morpho <- nounoursus_morpho[, c(
   "ID",
   "ChestHigh",
@@ -149,6 +154,7 @@ bear_all <- bear_all[, -which(names(bear_all) %in% "SnoutLen")]
 cluster_real <- read.csv2(here::here("results", "features_real", "cluster.csv"))
 lumsat_real <- read.csv2(here::here("results", "features_real", "lumsat.csv"))
 color_real <- merge(cluster_real, lumsat_real)
+rownames(color_real) <- color_real$Image_id
 
 cluster_teddy <- read.csv(here::here("data", "features_teddy", "cluster.csv"))
 cluster_teddy <- cluster_teddy[, -1]
@@ -233,14 +239,20 @@ for (i in 1:nrow(teddy_bear)) {
   # bear_all$Cutteness_adults[which(bear_all$ID%in%Elo_class$Image_id[i])]=Elo_class$Cutteness_over_60[i]
 }
 
+Elo_class$scores_class$Cuteness_30_100=rowMeans(Elo_class$scores_class[, c("Cutteness_19_30", "Cutteness_30_59", "Cutteness_over_60")], na.rm = TRUE)
+
 for (i in 1:nrow(Elo_class$scores_class)) {
   bear_all$Cutteness_children[which(
     bear_all$ID %in% Elo_class$scores_class$Image_id[i]
   )] = Elo_class$scores_class$Cutteness_under_10[i]
-  bear_all$Cutteness_adults[which(
+  bear_all$Cuteness_adult[which(
     bear_all$ID %in% Elo_class$scores_class$Image_id[i]
   )] = Elo_class$scores_class$Cutteness_over_60[i]
+  bear_all$Cuteness_30_100[which(
+    bear_all$ID %in% Elo_class$scores_class$Image_id[i]
+  )] = Elo_class$scores_class$Cuteness_30_100[i]
 }
+
 
 #Change some variable names
 
@@ -278,11 +290,12 @@ traits_all <- traits_all[,
     ))
 ]
 
+
+
 pca_all <- ade4::dudi.pca(traits_all, scannf = FALSE, nf = 5)
 sum((100 * pca_all$eig / sum(pca_all$eig))[1:3])
 
 res.ind <- factoextra::get_pca_ind(pca_all)
-
 
 pca_eigen <- factoextra::fviz_eig(pca_all, main = "Eigenvalues") #the three first axis takes over almost 60% of the variance
 
@@ -369,7 +382,7 @@ ggsave(
   device = "tiff"
 )
 
-#Interpret PC1 and PC2
+#Interpret PC1 and PC3
 factoextra::fviz_pca_var(
   pca_all,
   axes = c(1, 3),
@@ -438,7 +451,7 @@ pca_realbr$vjust[rownames(pca_realbr) %in% "Asian"] = 1.9
 fig_pca <- factoextra::fviz_pca_biplot(
   pca_all,
   axes = c(1, 3),
-  col.ind = bear_all$Cutteness,
+  col.ind = bear_all$Cuteness_30_100,
   geom = "point",
   gradient.cols = colors_grad,
   repel = TRUE,
@@ -461,7 +474,8 @@ fig_pca <- factoextra::fviz_pca_biplot(
   geom_point(
     data = pca_realbr,
     aes(x = Axis1, y = Axis3),
-    shape = 1,
+    shape = 21,
+    fill="grey",
     color = "black",
     size = 2.5
   ) +
@@ -496,6 +510,196 @@ ggsave(
   dpi = 300,
   compression = "lzw",
   bg = "white"
+)
+
+
+#Figure S2 (with adults and children)
+
+  # Calculate threshold for top 20% cuteness
+  cut_threshold_all <- quantile(bear_all$Cutteness, 0.95, na.rm = TRUE)
+  cut_threshold_children <- quantile(bear_all$Cutteness_children, 0.95, na.rm = TRUE)
+  cut_threshold_30_100 <- quantile(bear_all$Cuteness_30_100, 0.95, na.rm = TRUE)
+
+
+  # Logical index of top 20%
+  high_cute_idx_all <- which(bear_all$Cutteness >= cut_threshold_all)
+  high_cute_idx_children <- which(bear_all$Cutteness_children >= cut_threshold_children)
+  high_cute_idx_30_100 <- which(bear_all$Cuteness_30_100 >= cut_threshold_30_100)
+
+
+  # Subset PCA scores (Axis1 and Axis3) for these individuals
+  top10_df_all <- as.data.frame(pca_all$li[high_cute_idx_all, c("Axis1", "Axis3")])
+  top10_df_all$group <- "top10"
+  top10_df_children <- as.data.frame(pca_all$li[high_cute_idx_children, c("Axis1", "Axis3")])
+  top10_df_children$group <- "top10"
+  top10_df_30_100 <- as.data.frame(pca_all$li[high_cute_idx_30_100, c("Axis1", "Axis3")])
+  top10_df_30_100$group <- "top10"
+
+fig_adult <- factoextra::fviz_pca_biplot(
+  pca_all,
+  axes = c(1, 3),
+  col.ind = bear_all$Cuteness_30_100,
+  geom = "point",
+  gradient.cols = colors_grad,
+  repel = TRUE,
+  col.var = "#575656",
+  geom.var = c("arrow"),
+  alpha.ind = 1,
+  ggtheme = theme_bw(),
+  pointsize = 2.5
+) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray") +
+  labs(col = "Range", title = " ") +
+  theme(
+    legend.position = "none",
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text.y = element_text(size = 12),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(size = 12)
+  ) +
+  geom_point(
+    data = pca_realbr,
+    aes(x = Axis1, y = Axis3),
+    shape = 21,
+    fill="grey",
+    color = "black",
+    size = 2.5
+  ) +
+  geom_point(
+    data = top10_df_30_100,
+    aes(x = Axis1, y = Axis3),
+    shape = 21,
+    fill="red",
+    color = "black",
+    size = 2.5
+  ) +
+  stat_ellipse(
+    data = pca_realbr,
+    aes(x = Axis1, y = Axis3),
+    type = "t",
+    level = 0.95,
+    linetype = "dashed",
+    color = "#BDBDBD",
+    size = 0.7
+  ) +
+  stat_ellipse(
+    data = top10_df_30_100,
+    aes(x = Axis1, y = Axis3),
+    type = "norm",
+    level = 0.95,
+    linetype = "dashed",
+    color = "red",
+    size = 0.7
+  )+
+  geom_text(
+    data = pca_realbr,
+    aes(
+      x = Axis1,
+      y = Axis3,
+      label = rownames(pca_realbr),
+      hjust = hjust,
+      vjust = vjust
+    ),
+    color = "black",
+    size = 3.5
+  ) +
+  annotate(
+    "text",
+    x = -7.5, y = 7.5,
+    label = "Adult (age > 30)",
+    size = 6,
+    hjust = 0
+  )+
+  coord_cartesian(xlim = c(-7.5, 8.5), ylim = c(-7.5, 7.5))
+
+fig_children <- factoextra::fviz_pca_biplot(
+  pca_all,
+  axes = c(1, 3),
+  col.ind = bear_all$Cutteness_children,
+  geom = "point",
+  gradient.cols = colors_grad,
+  repel = TRUE,
+  col.var = "#575656",
+  geom.var = c("arrow"),
+  alpha.ind = 1,
+  ggtheme = theme_bw(),
+  pointsize = 2.5
+) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray") +
+  labs(col = "Range", title = " ") +
+  theme(
+    legend.position = "none",
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text.y = element_text(size = 12),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(size = 12)
+  ) +
+  geom_point(
+    data = pca_realbr,
+    aes(x = Axis1, y = Axis3),
+    shape = 21,
+    fill="grey",
+    color = "black",
+    size = 2.5
+  ) +
+  geom_point(
+    data = top10_df_children,
+    aes(x = Axis1, y = Axis3),
+    shape = 21,
+    fill="red",
+    color = "black",
+    size = 2.5
+  ) +
+  stat_ellipse(
+    data = pca_realbr,
+    aes(x = Axis1, y = Axis3),
+    type = "t",
+    level = 0.95,
+    linetype = "dashed",
+    color = "#BDBDBD",
+    size = 0.7
+  ) +
+  stat_ellipse(
+    data = top10_df_children,
+    aes(x = Axis1, y = Axis3),
+    type = "norm",
+    level = 0.95,
+    linetype = "dashed",
+    color = "red",
+    size = 0.7
+  )+
+  geom_text(
+    data = pca_realbr,
+    aes(
+      x = Axis1,
+      y = Axis3,
+      label = rownames(pca_realbr),
+      hjust = hjust,
+      vjust = vjust
+    ),
+    color = "black",
+    size = 3.5
+  ) +
+  annotate(
+    "text",
+    x = -7.5, y = 7.5,
+    label = "Children (age > 12)",
+    size = 6,
+    hjust = 0
+  )+
+  coord_cartesian(xlim = c(-7.5, 8.5), ylim = c(-7.5, 7.5))
+
+fig2_sup <- arrangeGrob(fig_children, fig_adult, ncol = 2)
+ggsave(
+  here::here("outputs", "fig2_sup.tiff"),
+  fig2_sup,
+  width = 15,
+  height = 8,
+  dpi = 300,
+  units = "in",
+  device = "tiff"
 )
 
 #find examples

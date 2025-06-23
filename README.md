@@ -28,9 +28,37 @@ contains the figures produced for the article
 - [`DESCRIPTION`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/DESCRIPTION):
 contains project metadata (author, date, dependencies, etc.)
 
+## Workflow
+    
+The script [`analysis/Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Cludy_toys.R) compute functional insurance with simulated metacommunities.
 
-Figures of the manuscript are stored in `outputs/`.
+The script [`analysis/Bear`_vs_nounoursus.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Bear`_vs_nounoursus.R) compute functional insurance for alpine herbaceous communities.
 
+The script [`analysis/features/cluster.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/features/cluster.R) extract information on color clusters heterogeneity in images.
+
+The script [`analysis/features/lumsat.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/features/lumsatl.R) extract information on lightness and saturation in images.
+
+The script [`analysis/morpho/morpho.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/morpho/morpho.R) compute the morphometric measures from the analysis of teady and real bears images.
+
+
+## Big files 
+
+  Some files were not uploaded to GitHub due to their large size. They are available upon request:
+
+  data/illustrations_figures
+  data/images_real
+  data/images_real_croped
+  data/images_real_tocrop
+  data/nounoursus
+
+
+##Figures are stored in `outputs/`.
+
+The following Figures and Tables can be reproduced with the script indicated in brackets (all in [`analysis/`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/)):
+
+- [cuddly.tiff](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/outputs), was produced by [`Cludy_toys.R`](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/analysis/Cludy_toys.R)
+- [fig_pca](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/outputs) wad produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/main/analysis/Bear`_vs_nounoursus.R)
+- [fig1-sup](https://github.com/nmouquet/NOUNOURSUSvsBEARS/tree/main/outputs), [fig2-sup](https://github.com/nmouquet/SAFE/tree/main/outputs), were produced by [`Bear`_vs_nounoursus.R`](https://github.com/nmouquet/OUNOURSUSvsBEARS/tree/main/analysis/Bear`_vs_nounoursus.R)
 
 
 ## Installation
