@@ -646,7 +646,7 @@ ggsave(
 )
 #----
 
-#PROJECTING PANDAS----
+#PROJECTING PANDAS (not used)----
 
 pandas <- c("255","433","462","470","837","863","990","1077","1100","1130","1152","1153")
 pandas_df <- as.data.frame(pca_all$li[pandas, c("Axis1", "Axis3")])
