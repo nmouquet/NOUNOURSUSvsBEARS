@@ -4,7 +4,7 @@
 
 Research compendium to reproduce analyses and figures of the following article:
 
-> Too cute to be wild: what teddy bears reveal about our disconnection from nature, by Mouquet N., Blanc, N., Brassac T., Casajus N. & Tribot A.-S. Submited to Trends in Ecology and Evolution
+> Too cute to be wild: what teddy bears reveal about our disconnection from nature, by Mouquet N., Blanc, N., Brassac T., Casajus N. & Tribot A.-S. Submited to BioScience.
 
 
 ## Content
