@@ -1,0 +1,212 @@
+# --------------------------------------------
+# CITATION file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# --------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "NOUNOURSUSvsBEARS" in publications use:'
+type: software
+license: MIT
+title: 'NOUNOURSUSvsBEARS: Too Cute to Be Wild'
+version: 0.0.1
+abstract: 'Research compendium of the article ''Too cute to be wild: what teddy bears
+  reveal about our disconnection from nature'' by Mouquet N. et al. submited to Trends
+  in Ecology and Evolution in 2025.'
+authors:
+- family-names: Mouquet
+  given-names: Nicolas
+  email: nicolas.mouquet@cnrs.fr
+  orcid: https://orcid.org/0000-0003-1840-6984
+repository-code: https://github.com/nmouquet/NOUNOURSUSvsBEARS
+url: https://github.com/nmouquet/NOUNOURSUSvsBEARS
+contact:
+- family-names: Mouquet
+  given-names: Nicolas
+  email: nicolas.mouquet@cnrs.fr
+  orcid: https://orcid.org/0000-0003-1840-6984
+references:
+- type: software
+  title: dplyr
+  abstract: 'dplyr: A Grammar of Data Manipulation'
+  notes: Depends
+  url: https://dplyr.tidyverse.org
+  repository: https://CRAN.R-project.org/package=dplyr
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+    orcid: https://orcid.org/0000-0003-4757-117X
+  - family-names: François
+    given-names: Romain
+    orcid: https://orcid.org/0000-0002-2444-4226
+  - family-names: Henry
+    given-names: Lionel
+  - family-names: Müller
+    given-names: Kirill
+    orcid: https://orcid.org/0000-0002-1416-3412
+  - family-names: Vaughan
+    given-names: Davis
+    email: davis@posit.co
+    orcid: https://orcid.org/0000-0003-4777-038X
+  year: '2025'
+  doi: 10.32614/CRAN.package.dplyr
+- type: software
+  title: ggplot2
+  abstract: 'ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics'
+  notes: Depends
+  url: https://ggplot2.tidyverse.org
+  repository: https://CRAN.R-project.org/package=ggplot2
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+    orcid: https://orcid.org/0000-0003-4757-117X
+  - family-names: Chang
+    given-names: Winston
+    orcid: https://orcid.org/0000-0002-1576-2126
+  - family-names: Henry
+    given-names: Lionel
+  - family-names: Pedersen
+    given-names: Thomas Lin
+    email: thomas.pedersen@posit.co
+    orcid: https://orcid.org/0000-0002-5147-4711
+  - family-names: Takahashi
+    given-names: Kohske
+  - family-names: Wilke
+    given-names: Claus
+    orcid: https://orcid.org/0000-0002-7470-9261
+  - family-names: Woo
+    given-names: Kara
+    orcid: https://orcid.org/0000-0002-5125-4188
+  - family-names: Yutani
+    given-names: Hiroaki
+    orcid: https://orcid.org/0000-0002-3385-7233
+  - family-names: Dunnington
+    given-names: Dewey
+    orcid: https://orcid.org/0000-0002-9415-4582
+  - family-names: Brand
+    given-names: Teun
+    name-particle: van den
+    orcid: https://orcid.org/0000-0002-9335-7468
+  year: '2025'
+  doi: 10.32614/CRAN.package.ggplot2
+- type: software
+  title: imager
+  abstract: 'imager: Image Processing Library Based on ''CImg'''
+  notes: Depends
+  url: https://asgr.github.io/imager/
+  repository: https://CRAN.R-project.org/package=imager
+  authors:
+  - family-names: Barthelme
+    given-names: Simon
+    email: simon.barthelme@gipsa-lab.fr
+  year: '2025'
+  doi: 10.32614/CRAN.package.imager
+- type: software
+  title: tidyverse
+  abstract: 'tidyverse: Easily Install and Load the ''Tidyverse'''
+  notes: Depends
+  url: https://tidyverse.tidyverse.org
+  repository: https://CRAN.R-project.org/package=tidyverse
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@rstudio.com
+  year: '2025'
+  doi: 10.32614/CRAN.package.tidyverse
+- type: software
+  title: here
+  abstract: 'here: A Simpler Way to Find Your Files'
+  notes: Imports
+  url: https://here.r-lib.org/
+  repository: https://CRAN.R-project.org/package=here
+  authors:
+  - family-names: Müller
+    given-names: Kirill
+    email: krlmlr+r@mailbox.org
+    orcid: https://orcid.org/0000-0002-1416-3412
+  year: '2025'
+  doi: 10.32614/CRAN.package.here
+- type: software
+  title: parallel
+  abstract: 'R: A Language and Environment for Statistical Computing'
+  notes: Imports
+  authors:
+  - name: R Core Team
+  institution:
+    name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2025'
+- type: software
+  title: RColorBrewer
+  abstract: 'RColorBrewer: ColorBrewer Palettes'
+  notes: Imports
+  repository: https://CRAN.R-project.org/package=RColorBrewer
+  authors:
+  - family-names: Neuwirth
+    given-names: Erich
+    email: erich.neuwirth@univie.ac.at
+  year: '2025'
+  doi: 10.32614/CRAN.package.RColorBrewer
+- type: software
+  title: readxl
+  abstract: 'readxl: Read Excel Files'
+  notes: Imports
+  url: https://readxl.tidyverse.org
+  repository: https://CRAN.R-project.org/package=readxl
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+    orcid: https://orcid.org/0000-0003-4757-117X
+  - family-names: Bryan
+    given-names: Jennifer
+    email: jenny@posit.co
+    orcid: https://orcid.org/0000-0002-6983-2759
+  year: '2025'
+  doi: 10.32614/CRAN.package.readxl
+- type: software
+  title: stringdist
+  abstract: 'stringdist: Approximate String Matching, Fuzzy Text Search, and String
+    Distance Functions'
+  notes: Imports
+  url: https://github.com/markvanderloo/stringdist
+  repository: https://CRAN.R-project.org/package=stringdist
+  authors:
+  - family-names: Loo
+    given-names: Mark
+    name-particle: van der
+    email: mark.vanderloo@gmail.com
+    orcid: https://orcid.org/0000-0002-9807-4686
+  year: '2025'
+  doi: 10.32614/CRAN.package.stringdist
+- type: software
+  title: stringi
+  abstract: 'stringi: Fast and Portable Character String Processing Facilities'
+  notes: Imports
+  url: https://stringi.gagolewski.com/
+  repository: https://CRAN.R-project.org/package=stringi
+  authors:
+  - family-names: Gagolewski
+    given-names: Marek
+    email: marek@gagolewski.com
+    orcid: https://orcid.org/0000-0003-0637-6028
+  year: '2025'
+  doi: 10.32614/CRAN.package.stringi
+- type: software
+  title: tidytext
+  abstract: 'tidytext: Text Mining using ''dplyr'', ''ggplot2'', and Other Tidy Tools'
+  notes: Imports
+  url: https://juliasilge.github.io/tidytext/
+  repository: https://CRAN.R-project.org/package=tidytext
+  authors:
+  - family-names: Robinson
+    given-names: David
+    email: admiral.david@gmail.com
+  - family-names: Silge
+    given-names: Julia
+    email: julia.silge@gmail.com
+    orcid: https://orcid.org/0000-0002-3671-836X
+  year: '2025'
+  doi: 10.32614/CRAN.package.tidytext
+
