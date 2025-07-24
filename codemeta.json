@@ -1,0 +1,299 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "NOUNOURSUSvsBEARS",
+  "description": "Research compendium of the article 'Too cute to be wild: what teddy bears reveal about our disconnection from nature' by Mouquet N. et al. submited to Trends in Ecology and Evolution in 2025.",
+  "name": "NOUNOURSUSvsBEARS: Too Cute to Be Wild",
+  "codeRepository": "https://github.com/nmouquet/NOUNOURSUSvsBEARS",
+  "issueTracker": "https://github.com/nmouquet/NOUNOURSUSvsBEARS/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.0.1",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.5.1 (2025-06-13)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Nicolas",
+      "familyName": "Mouquet",
+      "email": "nicolas.mouquet@cnrs.fr",
+      "@id": "https://orcid.org/0000-0003-1840-6984"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "@type": "Person",
+      "givenName": "Nicolas",
+      "familyName": "Mouquet",
+      "email": "nicolas.mouquet@cnrs.fr",
+      "@id": "https://orcid.org/0000-0003-1840-6984"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Nicolas",
+      "familyName": "Mouquet",
+      "email": "nicolas.mouquet@cnrs.fr",
+      "@id": "https://orcid.org/0000-0003-1840-6984"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "colorspace",
+      "name": "colorspace",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=colorspace"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "dplyr",
+      "name": "dplyr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=dplyr"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "ggplot2",
+      "name": "ggplot2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "gridExtra",
+      "name": "gridExtra",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=gridExtra"
+    },
+    "5": {
+      "@type": "SoftwareApplication",
+      "identifier": "imager",
+      "name": "imager",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=imager"
+    },
+    "6": {
+      "@type": "SoftwareApplication",
+      "identifier": "reshape2",
+      "name": "reshape2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=reshape2"
+    },
+    "7": {
+      "@type": "SoftwareApplication",
+      "identifier": "SDMTools",
+      "name": "SDMTools"
+    },
+    "8": {
+      "@type": "SoftwareApplication",
+      "identifier": "splancs",
+      "name": "splancs",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=splancs"
+    },
+    "9": {
+      "@type": "SoftwareApplication",
+      "identifier": "tidyverse",
+      "name": "tidyverse",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tidyverse"
+    },
+    "10": {
+      "@type": "SoftwareApplication",
+      "identifier": "ade4",
+      "name": "ade4",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ade4"
+    },
+    "11": {
+      "@type": "SoftwareApplication",
+      "identifier": "cowplot",
+      "name": "cowplot",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=cowplot"
+    },
+    "12": {
+      "@type": "SoftwareApplication",
+      "identifier": "factoextra",
+      "name": "factoextra",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=factoextra"
+    },
+    "13": {
+      "@type": "SoftwareApplication",
+      "identifier": "GGally",
+      "name": "GGally",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=GGally"
+    },
+    "14": {
+      "@type": "SoftwareApplication",
+      "identifier": "here",
+      "name": "here",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=here"
+    },
+    "15": {
+      "@type": "SoftwareApplication",
+      "identifier": "parallel",
+      "name": "parallel"
+    },
+    "16": {
+      "@type": "SoftwareApplication",
+      "identifier": "pbmcapply",
+      "name": "pbmcapply",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=pbmcapply"
+    },
+    "17": {
+      "@type": "SoftwareApplication",
+      "identifier": "RColorBrewer",
+      "name": "RColorBrewer",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=RColorBrewer"
+    },
+    "18": {
+      "@type": "SoftwareApplication",
+      "identifier": "readxl",
+      "name": "readxl",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=readxl"
+    },
+    "19": {
+      "@type": "SoftwareApplication",
+      "identifier": "spatstat.geom",
+      "name": "spatstat.geom",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spatstat.geom"
+    },
+    "20": {
+      "@type": "SoftwareApplication",
+      "identifier": "stringdist",
+      "name": "stringdist",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=stringdist"
+    },
+    "21": {
+      "@type": "SoftwareApplication",
+      "identifier": "stringi",
+      "name": "stringi",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=stringi"
+    },
+    "22": {
+      "@type": "SoftwareApplication",
+      "identifier": "tidytext",
+      "name": "tidytext",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tidytext"
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "67238.128KB",
+  "readme": "https://github.com/nmouquet/NOUNOURSUSvsBEARS/blob/master/README.md"
+}

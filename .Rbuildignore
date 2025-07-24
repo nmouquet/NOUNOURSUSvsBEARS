@@ -1,2 +1,11 @@
-^.*\.Rproj$
+^NOUNOURSUSvsBEARS\.Rproj$
 ^\.Rproj\.user$
+^air\.toml$
+^\.vscode$
+^\.DS_Store$
+^\.github$
+^LICENSE$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT\.md$
+^CITATION\.cff$
+^codemeta\.json$
