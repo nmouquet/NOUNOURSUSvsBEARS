@@ -291,7 +291,6 @@ standardized_cuddly <- ifelse(
       "ouistiti",
       "orang",
       "chimpanze",
-      "paresseux",
       "lemurien",
       "gorille",
       "maki"
@@ -524,7 +523,8 @@ standardized_cuddly <- ifelse(
       "grenouille",
       "dromadaire",
       "fennec",
-      "chameau"
+      "chameau",
+      "paresseux"
     ),
   "Other animal",
   standardized_cuddly
